@@ -37,7 +37,7 @@ def play_and_learn():
     engine.guesses_allowed = 30
     letters = list(string.ascii_uppercase)
     current_state = '_' * num_letters
-    part_word = engine.start_game(4)
+    part_word = engine.start_game()
     while '_' in part_word:
         weights = q_table[current_state]
         weights = [weights[letter] for letter in letters]
